@@ -53,15 +53,16 @@ esp_lcd_new_panel_st7789()
 <br>
 
 #### Hardware Connections
-lcd - esp
-VCC - 3v3
-GND - G
-DIN - 11
-CLK - 12
-CS - 10
-DC - 9
-RST - 8
-BL - 7
+| LCD Pin | ESP32-S3 GPIO |
+|--------|--------------|
+| VCC    | 3.3V         |
+| GND    | GND          |
+| DIN    | GPIO11       |
+| CLK    | GPIO12       |
+| CS     | GPIO10       |
+| DC     | GPIO9        |
+| RST    | GPIO8        |
+| BL     | GPIO7        |
 
 #### Configuration (menuconfig)
 
