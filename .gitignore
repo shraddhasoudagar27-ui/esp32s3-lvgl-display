@@ -1,0 +1,16 @@
+# Build files
+build/
+lcd_lvgl/build/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Temporary
+*.bin
+*.elf
+
+# Python cache (idf uses python)
+__pycache__/
