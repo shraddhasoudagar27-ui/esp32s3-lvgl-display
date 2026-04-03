@@ -18,41 +18,36 @@ It demonstrates low-level display driver integration, GUI rendering, and embedde
 ```bash
 C:\esp-idf\export.ps1
 ```
-#### Project Creation
+### Project Creation
 ```
 idf.py create-project lcd_lvgl
 idf.py set-target esp32s3
 ```
 <br>
 
-#### Components / Libraries
+## Components
 LCD: https://thinkrobotics.com/products/1-47inch-lcd-display-module-with-172x320-rounded-corners?variant=44821944238397
+
 ESP32S3: https://www.amazon.in/SparkFun-WRL-24408-Thing-Plus-ESP32-S3/dp/B0D1BB79SM
 
 #### LVGL (GUI Library)
-<br> 
 Added manually:
-<br> 
-Used for:
-UI rendering
-Widgets and layouts
-ESP-IDF Built-in Components
-esp_lcd → LCD panel driver (SPI + ST7789)
-FreeRTOS → Task scheduling
-<br> 
+
+- ESP-IDF Built-in Components
+- esp_lcd → LCD panel driver (SPI + ST7789)
+- FreeRTOS → Task scheduling
 
 #### Display Configuration
-Display Controller: ST7789
-Interface: SPI (SPI2_HOST)
-Color Format: RGB565 (16-bit)
+- Display Controller: ST7789
+- Interface: SPI (SPI2_HOST)
+- Color Format: RGB565 (16-bit)
 
 Driver initialized using:
 ```
 esp_lcd_new_panel_st7789()
 ```
-<br>
 
-#### Hardware Connections
+## Hardware Connections
 | LCD Pin | ESP32-S3 GPIO |
 |--------|--------------|
 | VCC    | 3.3V         |
@@ -64,7 +59,8 @@ esp_lcd_new_panel_st7789()
 | RST    | GPIO8        |
 | BL     | GPIO7        |
 
-#### Configuration (menuconfig)
+
+## Configuration (menuconfig)
 
 Configured via:
 ```
@@ -82,7 +78,7 @@ Montserrat 28
 Montserrat 48
 ```
 
-#### Build & Flash
+## Build & Flash
 ```
 idf.py build
 idf.py -p <PORT> flash monitor
